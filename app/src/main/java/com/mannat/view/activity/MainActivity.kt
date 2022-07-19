@@ -1,20 +1,14 @@
 package com.mannat.view.activity
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.mannat.R
 import com.mannat.base.BaseActivity
 import com.mannat.databinding.ActivityMainBinding
-import com.mannat.service.api.NetworkResult
-import com.mannat.utils.CommonUtils.TAG
-import com.mannat.utils.CustomLoader
 import com.mannat.viewmodel.MainViewModel
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     val viewModel by viewModels<MainViewModel>()
 
@@ -24,24 +18,29 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onViewBindingCreated(savedInstanceState: Bundle?) {
         super.onViewBindingCreated(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        //todo rest of code here
-        fetchdata()
-    }
 
-    private fun fetchdata() {
-        viewModel.fetchLoginResponse()
-        viewModel.response.observe(this) {
-            when (it) {
-                is NetworkResult.Success -> {
-                    Log.d(TAG, "fetchdata: ${it.data}")
+        binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.page_1 -> {
+                    true
                 }
-                is NetworkResult.Error -> {
-                    Log.d(TAG, "fetchdata: ${it.data}")
+                R.id.page_2 -> {
+                    true
                 }
-                is NetworkResult.Loading -> {
-                    CustomLoader.showLoader(this)
+                R.id.page_3 -> {
+                    true
+                }
+                R.id.page_4 -> {
+                    true
+                }
+                R.id.page_5 -> {
+                    true
+                }
+                else -> {
+                    false
                 }
             }
         }
     }
+
 }
