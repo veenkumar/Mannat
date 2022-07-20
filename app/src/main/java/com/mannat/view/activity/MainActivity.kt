@@ -1,5 +1,7 @@
 package com.mannat.view.activity
 
+import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.activity.viewModels
@@ -7,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import com.mannat.R
 import com.mannat.base.BaseActivity
 import com.mannat.databinding.ActivityMainBinding
+import com.mannat.view.fragment.*
 import com.mannat.viewmodel.MainViewModel
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
@@ -19,21 +22,40 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         super.onViewBindingCreated(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        this.supportFragmentManager.beginTransaction()
+            .replace(R.id.navView, MainFragment())
+            .commit()
+
         binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.page_1 -> {
+                R.id.home -> {
+                    this.supportFragmentManager.beginTransaction()
+                        .replace(R.id.navView, MainFragment())
+                        .commit()
                     true
                 }
-                R.id.page_2 -> {
+                R.id.member -> {
+                    this.supportFragmentManager.beginTransaction()
+                        .replace(R.id.navView, MemberFragment())
+                        .commit()
                     true
                 }
-                R.id.page_3 -> {
+                R.id.create_post -> {
+                    this.supportFragmentManager.beginTransaction()
+                        .replace(R.id.navView, CreatePostFragment())
+                        .commit()
                     true
                 }
-                R.id.page_4 -> {
+                R.id.profile -> {
+                    this.supportFragmentManager.beginTransaction()
+                        .replace(R.id.navView, ProfileFragment())
+                        .commit()
                     true
                 }
-                R.id.page_5 -> {
+                R.id.setting -> {
+                    this.supportFragmentManager.beginTransaction()
+                        .replace(R.id.navView, SettingsFragment())
+                        .commit()
                     true
                 }
                 else -> {
@@ -43,4 +65,22 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
     }
 
+     override fun onBackPressed() {
+         val alertDialogBuilder = AlertDialog.Builder(this)
+         alertDialogBuilder.setTitle(R.string.app_name)
+         alertDialogBuilder
+             .setMessage("Are you sure you want to exit")
+             .setCancelable(false)
+             .setPositiveButton("Yes") { dialog, id -> // if this button is clicked, close
+                 val a = Intent(Intent.ACTION_MAIN)
+                 a.addCategory(Intent.CATEGORY_HOME)
+                 a.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                 startActivity(a)
+             }
+             .setNegativeButton("No") { dialog, id -> // if this button is clicked, just closex
+                 dialog.cancel()
+             }
+         val alertDialog = alertDialogBuilder.create()
+         alertDialog.show()
+     }
 }

@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/page_1"
+        android:id="@+id/home"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home" />
+        android:title="@string/home" />
     <item
-        android:id="@+id/page_2"
+        android:id="@+id/member"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="Unknown" />
+        android:icon="@drawable/ic_baseline_people_24"
+        android:title="@string/members" />
     <item
-        android:id="@+id/page_3"
+        android:id="@+id/create_post"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="Unknown"/>
+        android:iconTintMode="add"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:title="@string/create_post"/>
     <item
-        android:id="@+id/page_4"
+        android:id="@+id/profile"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="Unknown"/>
+        android:icon="@drawable/ic_baseline_single_person_24"
+        android:title="@string/profile"/>
     <item
-        android:id="@+id/page_5"
+        android:id="@+id/setting"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="Unknown"/>
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/settings"/>
 </menu>
