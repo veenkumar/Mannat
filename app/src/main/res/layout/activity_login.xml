@@ -12,5 +12,64 @@
         android:layout_height="match_parent"
         tools:context=".view.activity.login.LoginActivity">
 
+        <EditText
+            android:id="@+id/etNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:inputType="number"
+            android:maxLength="10"
+            android:minHeight="48dp"
+            android:padding="@dimen/dp_15"
+            android:hint="Mobile Number"
+            android:background="@drawable/grey_border"
+            app:layout_constraintBottom_toTopOf="@+id/loginButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="Login"
+            app:layout_constraintBottom_toTopOf="@+id/etSignup"
+            app:layout_constraintEnd_toEndOf="@+id/etNumber"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/etNumber"
+            app:layout_constraintTop_toBottomOf="@+id/etNumber" />
+
+        <TextView
+            android:id="@+id/etAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:text="Create a new account?"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/etSignup"
+            app:layout_constraintEnd_toStartOf="@+id/etSignup"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/etNumber"
+            app:layout_constraintTop_toTopOf="@+id/etSignup" />
+
+        <TextView
+            android:id="@+id/etSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="Signup"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/etNumber"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/etAccount"
+            app:layout_constraintTop_toBottomOf="@+id/loginButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

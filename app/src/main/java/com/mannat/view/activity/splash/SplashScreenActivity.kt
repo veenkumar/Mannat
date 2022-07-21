@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import com.mannat.base.BaseActivity
 import com.mannat.databinding.ActivitySplashScreenBinding
 import com.mannat.view.activity.MainActivity
+import com.mannat.view.activity.login.LoginActivity
 
 class SplashScreenActivity : BaseActivity<ActivitySplashScreenBinding>() {
     override val bindingInflater: (LayoutInflater) -> ActivitySplashScreenBinding
@@ -17,7 +18,7 @@ class SplashScreenActivity : BaseActivity<ActivitySplashScreenBinding>() {
 
         Handler().postDelayed(
             {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, LoginActivity::class.java))
                 finish()
             }, 3000L
         )
