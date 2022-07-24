@@ -1,4 +1,4 @@
-package com.mannat.view.fragment
+package com.mannat.view.fragment.bottomnav
 
 import android.os.Bundle
 import android.view.LayoutInflater

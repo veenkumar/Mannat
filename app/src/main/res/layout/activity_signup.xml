@@ -12,163 +12,17 @@
         android:layout_height="match_parent"
         tools:context=".view.activity.signup.SignupActivity">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/signupImg"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/user_img"
+        <fragment
+            android:id="@+id/myNavHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
-
-        <TextView
-            android:id="@+id/pickImg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_baseline_photo_camera_24"
-            app:layout_constraintBottom_toBottomOf="@+id/signupImg"
-            app:layout_constraintEnd_toEndOf="@+id/signupImg"
-            app:layout_constraintStart_toEndOf="@+id/signupImg"
-            app:layout_constraintTop_toTopOf="@+id/signupImg"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
-            android:id="@+id/etFullName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="TextView"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/signupImg"
-            app:layout_constraintStart_toStartOf="@+id/signupImg"
-            app:layout_constraintTop_toBottomOf="@+id/signupImg" />
-
-        <Button
-            android:id="@+id/signupButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="32dp"
-            android:text="Signup"
-            app:layout_constraintBottom_toTopOf="@+id/etLogin"
-            app:layout_constraintEnd_toEndOf="@+id/etPinCode"
-            app:layout_constraintStart_toStartOf="@+id/etPinCode"
-            app:layout_constraintTop_toBottomOf="@+id/etPinCode" />
-
-        <EditText
-            android:id="@+id/etFirstName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/grey_border"
-            android:hint="First Name"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:maxLength="50"
-            android:padding="@dimen/dp_15"
-            app:layout_constraintBottom_toTopOf="@+id/etLastName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etFullName"
-            app:layout_constraintVertical_bias="0.25"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <EditText
-            android:id="@+id/etLastName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/grey_border"
-            android:hint="Last Name"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:maxLength="50"
-            android:padding="@dimen/dp_15"
-            app:layout_constraintBottom_toTopOf="@+id/etMobile"
-            app:layout_constraintEnd_toEndOf="@+id/etFirstName"
-            app:layout_constraintStart_toStartOf="@+id/etFirstName"
-            app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
-
-        <EditText
-            android:id="@+id/etMobile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/grey_border"
-            android:hint="Mobile Number"
-            android:inputType="number"
-            android:maxLength="10"
-            android:minHeight="48dp"
-            android:padding="@dimen/dp_15"
-            app:layout_constraintBottom_toTopOf="@+id/etState"
-            app:layout_constraintEnd_toEndOf="@+id/etLastName"
-            app:layout_constraintStart_toStartOf="@+id/etLastName"
-            app:layout_constraintTop_toBottomOf="@+id/etLastName" />
-
-        <EditText
-            android:id="@+id/etState"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/grey_border"
-            android:hint="State"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:maxLength="50"
-            android:padding="@dimen/dp_15"
-            app:layout_constraintBottom_toTopOf="@+id/etPinCode"
-            app:layout_constraintEnd_toEndOf="@+id/etMobile"
-            app:layout_constraintStart_toStartOf="@+id/etMobile"
-            app:layout_constraintTop_toBottomOf="@+id/etMobile" />
-
-        <EditText
-            android:id="@+id/etPinCode"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/grey_border"
-            android:hint="Pin Code"
-            android:inputType="number"
-            android:maxLength="6"
-            android:minHeight="48dp"
-            android:padding="@dimen/dp_15"
-            app:layout_constraintBottom_toTopOf="@+id/signupButton"
-            app:layout_constraintEnd_toEndOf="@+id/etState"
-            app:layout_constraintStart_toStartOf="@+id/etState"
-            app:layout_constraintTop_toBottomOf="@+id/etState" />
-
-        <TextView
-            android:id="@+id/etAccount2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="2dp"
-            android:text="Already Account?"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/etLogin"
-            app:layout_constraintEnd_toStartOf="@+id/etLogin"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="@+id/etPinCode"
-            app:layout_constraintTop_toTopOf="@+id/etLogin" />
-
-        <TextView
-            android:id="@+id/etLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:text="Login"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/etPinCode"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/etAccount2"
-            app:layout_constraintTop_toBottomOf="@+id/signupButton" />
-
+            app:navGraph="@navigation/navigation" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

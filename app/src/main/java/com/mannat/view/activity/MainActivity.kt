@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import com.mannat.R
 import com.mannat.base.BaseActivity
 import com.mannat.databinding.ActivityMainBinding
-import com.mannat.view.fragment.*
+import com.mannat.view.fragment.bottomnav.*
 import com.mannat.viewmodel.MainViewModel
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
@@ -20,7 +20,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onViewBindingCreated(savedInstanceState: Bundle?) {
         super.onViewBindingCreated(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         this.supportFragmentManager.beginTransaction()
             .replace(R.id.navView, MainFragment())
