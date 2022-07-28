@@ -12,11 +12,11 @@
         android:layout_height="match_parent"
         tools:context=".view.fragment.hometabs.AdminPostFragment">
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Admin Post"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/adminView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:listitem="@layout/video_items"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
