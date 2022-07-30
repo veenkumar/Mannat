@@ -22,13 +22,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onViewBindingCreated(savedInstanceState: Bundle?) {
         super.onViewBindingCreated(savedInstanceState)
 
-        /*binding.include.tNotification.setOnClickListener {
+        binding.include.tNotification.setOnClickListener {
             startActivity(Intent(this, NotificationActivity::class.java))
-        }*/
+        }
 
         this.supportFragmentManager.beginTransaction()
-//            .add(MainFragment(),"MainFragment")
-//            .addToBackStack("MainFragment")
             .replace(R.id.navView, MainFragment())
             .commit()
 
@@ -36,7 +34,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             when (item.itemId) {
                 R.id.home -> {
                     this.supportFragmentManager.beginTransaction()
-//                        .add(MainFragment(), "MainFragment")
                         .replace(R.id.navView, MainFragment())
                         .commit()
                     true

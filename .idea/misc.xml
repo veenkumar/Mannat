@@ -5,9 +5,19 @@
       <map>
         <entry key="app/src/main/res/drawable/buttonborder.xml" value="0.195" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.1945" />
+        <entry key="app/src/main/res/drawable/cloud_upload-48px.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/description-48px.xml" value="0.195" />
         <entry key="app/src/main/res/drawable/greyborder.xml" value="0.195" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/ic_baseline_comment_24.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/ic_baseline_language_24.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.1945" />
         <entry key="app/src/main/res/drawable/img.xml" value="0.1945" />
+        <entry key="app/src/main/res/drawable/logout-48px.xml" value="0.1945" />
+        <entry key="app/src/main/res/drawable/photo_library-48px.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/translate-48px.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/volunteer_activism-48px.xml" value="0.195" />
         <entry key="app/src/main/res/layout/about_gods_items.xml" value="0.18645833333333334" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2125" />
