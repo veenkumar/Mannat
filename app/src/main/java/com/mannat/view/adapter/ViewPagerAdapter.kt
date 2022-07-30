@@ -3,10 +3,11 @@ package com.mannat.view.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import androidx.fragment.app.FragmentStatePagerAdapter
 
 
 class ViewPagerAdapter(manager: FragmentManager?) :
-    FragmentPagerAdapter(manager!!) {
+    FragmentStatePagerAdapter(manager!!) {
     private val mFragmentList: MutableList<Fragment> = ArrayList()
     private val mFragmentTitleList: MutableList<String> = ArrayList()
 

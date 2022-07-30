@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BaseProject">
         <activity
-            android:name=".view.activity.NotificationActivity"
+            android:name=".view.activity.notification.NotificationActivity"
             android:exported="false" />
         <activity
             android:name=".view.activity.MainActivity"

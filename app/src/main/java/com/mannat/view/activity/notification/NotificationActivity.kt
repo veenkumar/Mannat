@@ -1,4 +1,4 @@
-package com.mannat.view.activity
+package com.mannat.view.activity.notification
 
 import android.os.Bundle
 import android.view.LayoutInflater

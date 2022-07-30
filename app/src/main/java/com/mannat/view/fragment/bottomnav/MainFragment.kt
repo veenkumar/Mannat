@@ -1,12 +1,10 @@
 package com.mannat.view.fragment.bottomnav
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.viewpager.widget.ViewPager
 import com.mannat.base.BaseFragment
 import com.mannat.databinding.FragmentMainBinding
 import com.mannat.view.adapter.ViewPagerAdapter
@@ -31,15 +29,19 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
 
-        adapter = ViewPagerAdapter(fragmentManager)
+        setupViewPager()
+
+        return binding.root
+    }
+
+    private fun setupViewPager() {
+        adapter = ViewPagerAdapter(activity!!.supportFragmentManager)
         adapter.addFragment(NewPostFragment(), "New Post")
         adapter.addFragment(TrendingFragment(), "Trending")
         adapter.addFragment(AboutGodsFragment(), "Ganesha")
         adapter.addFragment(AdminPostFragment(), "Admin Post")
         binding.viewPager.adapter = adapter
-        adapter.notifyDataSetChanged()
         binding.tabLayout.setupWithViewPager(binding.viewPager)
-
-        return binding.root
+        adapter.notifyDataSetChanged()
     }
 }

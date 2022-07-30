@@ -8,12 +8,14 @@
         <entry key="app/src/main/res/drawable/greyborder.xml" value="0.195" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.195" />
         <entry key="app/src/main/res/drawable/img.xml" value="0.1945" />
+        <entry key="app/src/main/res/layout/about_gods_items.xml" value="0.18645833333333334" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2125" />
         <entry key="app/src/main/res/layout/activity_notification.xml" value="0.1875" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.2125" />
         <entry key="app/src/main/res/layout/adapter_notification.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/custom_toolbar.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_about_gods.xml" value="0.1875" />
         <entry key="app/src/main/res/layout/fragment_admin_post.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_create_post.xml" value="0.1875" />
@@ -26,7 +28,8 @@
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_trending.xml" value="0.1875" />
         <entry key="app/src/main/res/layout/music_items.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/trending_items.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/new_post_items.xml" value="0.18645833333333334" />
+        <entry key="app/src/main/res/layout/trending_items.xml" value="0.33" />
         <entry key="app/src/main/res/layout/video_items.xml" value="0.22" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.21145833333333333" />
       </map>
