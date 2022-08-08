@@ -19,4 +19,9 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="Button.White" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@android:color/white</item>
+        <item name="backgroundTint">@color/white</item>
+    </style>
+
 </resources>

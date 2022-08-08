@@ -13,6 +13,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/black"
             tools:context=".view.fragment.signup.OtpFragment">
 
 
@@ -21,18 +22,22 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/grey_border"
                 android:hint="Please Enter Your Mobile Number"
                 android:inputType="number"
-                android:padding="@dimen/dp_15"
                 android:maxLength="10"
                 android:minHeight="48dp"
+                android:padding="@dimen/dp_15"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7"
+                app:layout_constraintVertical_bias="0.01999998"
                 app:layout_constraintVertical_chainStyle="packed" />
 
             <EditText
@@ -43,26 +48,44 @@
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/grey_border"
                 android:hint="OTP..."
-                android:padding="@dimen/dp_15"
                 android:inputType="textPersonName"
                 android:maxLength="6"
                 android:minHeight="48dp"
+                android:padding="@dimen/dp_15"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/button"
                 app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
-            <Button
+            <TextView
                 android:id="@+id/button"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="Button"
+                android:background="@drawable/whiteborder"
+                android:padding="@dimen/dp_15"
+                android:text="@string/signup"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </layout>
